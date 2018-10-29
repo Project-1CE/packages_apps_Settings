@@ -29,4 +29,8 @@
     <!-- Volume button music control -->
     <string name="volume_button_music_control_title">Playback control</string>
     <string name="volume_button_music_control_summary">Long-press volume buttons to skip music tracks when the screen is off</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">Quick torch</string>
+    <string name="power_button_torch_summary">Long-press the power button to toggle torch when the screen is off</string>
 </resources>
