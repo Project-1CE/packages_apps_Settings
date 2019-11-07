@@ -90,4 +90,6 @@
     <string name="connected_tws_device_saved_title">保存されたイヤホン</string>
     <string name="fast_charging_title">急速充電</string>
     <string name="fast_charging_summary">充電中の端末の発熱を減らしバッテリー寿命を伸ばすためには無効にしてください</string>
+    <string name="three_finger_gesture">スワイプでスクリーンショット</string>
+    <string name="three_finger_gesture_summary">3本指で下スワイプしてスクリーンショットを取得する</string>
 </resources>

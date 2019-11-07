@@ -90,4 +90,6 @@
     <string name="connected_tws_device_saved_title">已保存的耳机</string>
     <string name="fast_charging_title">快速充电</string>
     <string name="fast_charging_summary">禁用以减少设备在充电时产生的热量或延长电池的使用寿命</string>
+    <string name="three_finger_gesture">滑动截屏</string>
+    <string name="three_finger_gesture_summary">三指同时下滑以截取屏幕</string>
 </resources>

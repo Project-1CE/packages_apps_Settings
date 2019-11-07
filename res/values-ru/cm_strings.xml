@@ -93,4 +93,6 @@
     <string name="connected_tws_device_saved_title">Сохраненные наушники</string>
     <string name="fast_charging_title">Быстрая зарядка</string>
     <string name="fast_charging_summary">Отключите, чтобы уменьшить нагрев устройства во время зарядки или продлить срок службы аккумулятора</string>
+    <string name="three_finger_gesture">Свайп для создания скриншота</string>
+    <string name="three_finger_gesture_summary">Проведите вниз тремя пальцами для создания скриншота</string>
 </resources>
