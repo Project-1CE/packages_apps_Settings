@@ -33,4 +33,8 @@
     <!-- One shot automatic brightness -->
     <string name="auto_brightness_one_shot_title">Enable one-shot mode</string>
     <string name="auto_brightness_one_shot_summary">Brightness adjustment will only occur at the moment the screen is turned on</string>
+
+    <!-- Navigation bar hint -->
+    <string name="show_navbar_hint_title">Navigation hint</string>
+    <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
 </resources>
