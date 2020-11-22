@@ -18,4 +18,7 @@
     <!-- Project ICE build info -->
     <string name="custom_firmware_version">Project ICE version</string>
     <string name="custom_firmware_uri" translatable="false">https://project-ice.org/</string>
+
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">Screen refresh rate</string>
 </resources>
