@@ -93,4 +93,9 @@ Vous êtes maintenant à <xliff:g id="step_count">%1$d</xliff:g> étapes de l\'a
     <string name="fast_charging_summary">Désactiver pour réduire la chaleur produite par l\'appareil pendant la charge ou pour prolonger la durée de vie de la batterie</string>
     <string name="three_finger_gesture">Glisser pour prendre une capture d\'écran</string>
     <string name="three_finger_gesture_summary">Balayez vers le bas avec trois doigts pour prendre une capture d’écran</string>
+    <string name="security_settings_face_unlock_redo_face_scan_summary">Supprimer l\'analyse faciale existante et créer une nouvelle analyse</string>
+    <string name="security_settings_face_unlock_redo_face_scan_title">Scanner à nouveau le visage</string>
+    <string name="security_dashboard_summary_face_and_fingerprint">Verrouillage de l\'écran, empreinte digitale, déverrouillage facial</string>
+    <string name="face_redo_confirm_btn">Recommencer</string>
+    <string name="face_redo_warning_msg">Voulez-vous supprimer l\'analyse faciale existante et en créer une nouvelle ?</string>
 </resources>

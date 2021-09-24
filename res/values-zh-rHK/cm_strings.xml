@@ -32,4 +32,9 @@
     <string name="wake_when_plugged_or_unplugged_summary">當連接或拔除電源時開啓螢幕</string>
     <string name="three_finger_gesture">滑動截屏</string>
     <string name="three_finger_gesture_summary">三指同時下滑以截取屏幕</string>
+    <string name="security_settings_face_unlock_redo_face_scan_summary">移除現有的面部數據並重新錄入</string>
+    <string name="security_settings_face_unlock_redo_face_scan_title">重新錄入面部數據</string>
+    <string name="security_dashboard_summary_face_and_fingerprint">屏幕鎖定、指紋、面部解鎖</string>
+    <string name="face_redo_confirm_btn">重做</string>
+    <string name="face_redo_warning_msg">是否要移除現有的面部數據，並創建新的掃描？</string>
 </resources>

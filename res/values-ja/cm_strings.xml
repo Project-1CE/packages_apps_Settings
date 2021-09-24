@@ -92,4 +92,9 @@
     <string name="fast_charging_summary">充電中の端末の発熱を減らしバッテリー寿命を伸ばすためには無効にしてください</string>
     <string name="three_finger_gesture">スワイプでスクリーンショット</string>
     <string name="three_finger_gesture_summary">3本指で下スワイプしてスクリーンショットを取得する</string>
+    <string name="security_settings_face_unlock_redo_face_scan_summary">既存の顔スキャンを削除して新しいスキャンを作成します</string>
+    <string name="security_settings_face_unlock_redo_face_scan_title">顔スキャンを再実行</string>
+    <string name="security_dashboard_summary_face_and_fingerprint">画面ロック、指紋、顔認証ロック解除</string>
+    <string name="face_redo_confirm_btn">やり直す</string>
+    <string name="face_redo_warning_msg">既存の顔スキャンを削除して新しいスキャンを作成しますか?</string>
 </resources>

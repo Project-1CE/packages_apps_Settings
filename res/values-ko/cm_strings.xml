@@ -92,4 +92,9 @@
     <string name="fast_charging_summary">충전 중에 발생하는 열을 줄여 배터리 수명을 연장하려면 비활성화</string>
     <string name="three_finger_gesture">화면을 쓸어 스크린샷 찍기</string>
     <string name="three_finger_gesture_summary">화면을 세 손가락으로 쓸어내려 캡처합니다</string>
+    <string name="security_settings_face_unlock_redo_face_scan_summary">기존의 얼굴 스캔을 제거하고 새 스캔을 만듭니다.</string>
+    <string name="security_settings_face_unlock_redo_face_scan_title">얼굴 스캔 취소</string>
+    <string name="security_dashboard_summary_face_and_fingerprint">화면 잠금, 지문, 얼굴인식 잠금해제</string>
+    <string name="face_redo_confirm_btn">재시도</string>
+    <string name="face_redo_warning_msg">기존 얼굴 스캔을 제거하고 새 스캔을 만드시겠습니까?</string>
 </resources>
