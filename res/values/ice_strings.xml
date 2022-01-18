@@ -18,6 +18,10 @@
     <!-- Project ICE build info -->
     <string name="custom_firmware_version">Project ICE version</string>
 
+    <!-- System UI tuner -->
+    <string name="status_bar_icons_title">Statusbar icon tuner</string>
+    <string name="status_bar_icons_desc">Customize the visibility of statusbar icons</string>
+
     <!-- Double tap to sleep -->
     <string name="tap_to_sleep">Tap to sleep</string>
     <string name="tap_to_sleep_summary">Double-tap on the home screen or lockscreen to put the device to sleep</string>
