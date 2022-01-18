@@ -17,4 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Project ICE build info -->
     <string name="custom_firmware_version">Project ICE version</string>
+
+    <!-- System UI tuner -->
+    <string name="status_bar_icons_title">Statusbar icon tuner</string>
+    <string name="status_bar_icons_desc">Customize the visibility of statusbar icons</string>
 </resources>
