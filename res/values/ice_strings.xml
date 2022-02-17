@@ -22,6 +22,10 @@
     <!-- Refresh rate -->
     <string name="refresh_rate_title">Screen refresh rate</string>
 
+    <!-- Double tap to sleep -->
+    <string name="tap_to_sleep">Tap to sleep</string>
+    <string name="tap_to_sleep_summary">Double-tap on the home screen or lockscreen to put the device to sleep</string>
+
     <!-- Add sliders for color balance adjustment via ColorDisplayManager -->
     <string name="color_mode_balance_category">Color balance</string>
     <string name="color_mode_balance_red">Red strength</string>
