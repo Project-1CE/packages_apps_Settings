@@ -19,9 +19,6 @@
     <string name="custom_firmware_version">Project ICE version</string>
     <string name="custom_firmware_uri" translatable="false">https://project-ice.org/</string>
 
-    <!-- Refresh rate -->
-    <string name="refresh_rate_title">Screen refresh rate</string>
-
     <!-- Double tap to sleep -->
     <string name="tap_to_sleep">Tap to sleep</string>
     <string name="tap_to_sleep_summary">Double-tap on the home screen or lockscreen to put the device to sleep</string>
