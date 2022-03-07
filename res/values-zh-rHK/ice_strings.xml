@@ -17,8 +17,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Project ICE build info -->
     <string name="custom_firmware_version">Project ICE 版本</string>
-    <!-- Refresh rate -->
-    <string name="refresh_rate_title">螢幕刷新率</string>
     <!-- Double tap to sleep -->
     <string name="tap_to_sleep">輕按以休眠</string>
     <string name="tap_to_sleep_summary">在主畫面或上鎖畫面上連按兩下即可將設備進入休眠</string>

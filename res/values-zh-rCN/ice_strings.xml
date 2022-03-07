@@ -17,8 +17,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Project ICE build info -->
     <string name="custom_firmware_version">Project ICE 版本</string>
-    <!-- Refresh rate -->
-    <string name="refresh_rate_title">屏幕刷新率</string>
     <!-- Double tap to sleep -->
     <string name="tap_to_sleep">点按睡眠</string>
     <string name="tap_to_sleep_summary">在主屏幕或锁屏界面点按两次即可使设备进入睡眠</string>
@@ -31,4 +29,13 @@
     <!-- One shot automatic brightness -->
     <string name="auto_brightness_one_shot_title">启用“一键”模式</string>
     <string name="auto_brightness_one_shot_summary">亮度调节仅在点亮屏幕的一瞬进行</string>
+    <!-- Navigation bar hint -->
+    <string name="show_navbar_hint_title">手势提示线</string>
+    <string name="show_navbar_hint_summary">在屏幕底部显示手势提示线</string>
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">播放控制</string>
+    <string name="volume_button_music_control_summary">息屏时长按音量键以切换音乐曲目</string>
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">快捷手电筒</string>
+    <string name="power_button_torch_summary">息屏时长按电源键以开关手电筒</string>
 </resources>
