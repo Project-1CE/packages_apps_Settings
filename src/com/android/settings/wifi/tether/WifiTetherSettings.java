@@ -19,6 +19,8 @@ package com.android.settings.wifi.tether;
 import static android.net.wifi.WifiManager.WIFI_AP_STATE_CHANGED_ACTION;
 import static com.android.settings.wifi.tether.WifiTetherApBandPreferenceController.BAND_BOTH_2G_5G;
 
+import static com.android.settings.wifi.WifiUtils.canShowWifiHotspot;
+
 import android.app.settings.SettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -40,6 +42,7 @@ import com.android.settings.core.FeatureFlags;
 import com.android.settings.dashboard.RestrictedDashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.widget.SettingsMainSwitchBar;
+import com.android.settings.wifi.WifiUtils;
 import com.android.settingslib.TetherUtil;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
@@ -111,6 +114,13 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        if (!canShowWifiHotspot(getContext())) {
+            Log.e(TAG, "can not launch Wi-Fi hotspot settings"
+                    + " because the config is not set to show.");
+            finish();
+            return;
+        }
+
         setIfOnlyAvailableForAdmins(true);
         mUnavailable = isUiRestricted() || !mWifiRestriction.isHotspotAvailable(getContext());
     }
@@ -162,6 +172,9 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         if (context != null) {
             context.registerReceiver(mTetherChangeReceiver, TETHER_STATE_CHANGE_FILTER,
                     Context.RECEIVER_EXPORTED_UNAUDITED);
+            // The intent WIFI_AP_STATE_CHANGED_ACTION is not sticky intent anymore after SC-V2
+            // Handle the initial state after register the receiver.
+            updateDisplayWithNewConfig();
         }
     }
 
@@ -340,12 +353,12 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
 
         @Override
         protected boolean isPageSearchEnabled(Context context) {
+            if (context == null || !WifiUtils.canShowWifiHotspot(context)) return false;
             return !FeatureFlagUtils.isEnabled(context, FeatureFlags.TETHER_ALL_IN_ONE);
         }
 
         @Override
-        public List<AbstractPreferenceController> createPreferenceControllers(
-                Context context) {
+        public List<AbstractPreferenceController> createPreferenceControllers(Context context) {
             return buildPreferenceControllers(context, null /* listener */);
         }
     }

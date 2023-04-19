@@ -180,8 +180,11 @@ public class BluetoothDeviceDetailsFragment extends RestrictedDashboardFragment 
                 controlUri = null;
             }
         }
-        use(SlicePreferenceController.class).setSliceUri(sliceEnabled ? controlUri : null);
-        use(SlicePreferenceController.class).onStart();
+        final SlicePreferenceController slicePreferenceController = use(
+                SlicePreferenceController.class);
+        slicePreferenceController.setSliceUri(sliceEnabled ? controlUri : null);
+        slicePreferenceController.onStart();
+        slicePreferenceController.displayPreference(getPreferenceScreen());
     }
 
     private final ViewTreeObserver.OnGlobalLayoutListener mOnGlobalLayoutListener =
@@ -287,6 +290,8 @@ public class BluetoothDeviceDetailsFragment extends RestrictedDashboardFragment 
         controllers.add(new BluetoothDetailsMacAddressController(context, this, mCachedDevice,
                 lifecycle));
         controllers.add(new BluetoothDetailsRelatedToolsController(context, this, mCachedDevice,
+                lifecycle));
+        controllers.add(new BluetoothDetailsPairOtherController(context, this, mCachedDevice,
                 lifecycle));
         if (mBAPropertyChecked == false) {
             int advAudioMask = SystemProperties.getInt(BLUETOOTH_ADV_AUDIO_MASK_PROP, 0);
