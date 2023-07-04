@@ -44,16 +44,16 @@ public class TapToSleepPreferenceController extends AbstractPreferenceController
 
     @Override
     public void updateState(Preference preference) {
-        int value = Settings.System.getInt(
-                mContext.getContentResolver(), Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0);
+        int value = Settings.Secure.getInt(
+                mContext.getContentResolver(), Settings.Secure.DOUBLE_TAP_SLEEP_GESTURE, 0);
         ((SwitchPreference) preference).setChecked(value != 0);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value = (Boolean) newValue;
-        Settings.System.putInt(
-                mContext.getContentResolver(), Settings.System.DOUBLE_TAP_SLEEP_GESTURE, value ? 1 : 0);
+        Settings.Secure.putInt(
+                mContext.getContentResolver(), Settings.Secure.DOUBLE_TAP_SLEEP_GESTURE, value ? 1 : 0);
         return true;
     }
 }
