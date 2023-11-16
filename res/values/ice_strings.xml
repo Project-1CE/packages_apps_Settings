@@ -29,4 +29,7 @@
     <!-- Navigation bar hint -->
     <string name="show_navbar_hint_title">Navigation hint</string>
     <string name="show_navbar_hint_summary">Show navigation hint bar at the bottom of the screen</string>
+
+    <!-- Auto PIN confirm -->
+    <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
 </resources>
