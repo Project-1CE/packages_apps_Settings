@@ -42,6 +42,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
+import com.android.settings.deviceinfo.PhoneNumberSummaryPreference;
 import com.android.settings.deviceinfo.simstatus.SlotSimStatus;
 import com.android.settings.network.SubscriptionUtil;
 import com.android.settings.network.telephony.MobileNetworkUtils;
@@ -138,7 +139,7 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
 
             category.addPreference(multiImeiPreference);
             multiImeiPreference.setTitle(getTitle(simSlotNumber));
-            multiImeiPreference.setSummary(getSummary(simSlotNumber));
+            multiImeiPreference.setSummary(getSummary());
         }
     }
 
@@ -151,7 +152,7 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
         multiSimPreference.setCopyingEnabled(true);
         category.addPreference(multiSimPreference);
         multiSimPreference.setTitle(getTitleForCdmaPhone(slotId, false));
-        multiSimPreference.setSummary(getMeid(slotId));
+        multiSimPreference.setSummary(getSummary());
     }
 
     private boolean isCdmaPreferenceRequired() {
@@ -161,6 +162,11 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
     @Override
     public void updateState(Preference preference) {
         updatePreference(preference, keyToSlotIndex(preference.getKey()));
+    }
+
+    @Override
+    public CharSequence getSummary() {
+        return mContext.getString(R.string.device_info_protected_single_press);
     }
 
     private CharSequence getSummary(int simSlot) {
@@ -210,17 +216,12 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
     protected void updatePreference(Preference preference, int simSlot) {
-        if (simSlot < 0) {
-            preference.setVisible(false);
-            return;
-        }
         if (preference.getKey().startsWith(DEFAULT_MEID_KEY)) {
             preference.setTitle(getTitleForCdmaPhone(simSlot, false));
-            preference.setSummary(getMeid(simSlot));
-            return;
+        } else {
+            preference.setTitle(getTitle(simSlot));
         }
-        preference.setTitle(getTitle(simSlot));
-        preference.setSummary(getSummary(simSlot));
+        preference.setSummary(getSummary());
     }
 
     private String getImei(int slot) {
@@ -315,7 +316,7 @@ public class ImeiInfoPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
     Preference createNewPreference(Context context) {
-        return new Preference(context);
+        return new PhoneNumberSummaryPreference(context);
     }
 
     private int makeRadioVersion(int major, int minor) {
